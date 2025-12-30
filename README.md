@@ -26,7 +26,7 @@ This project focuses on:
 
 ## 🚀 Live Demo
 
-👉 https://github.com/mohammadreza-mirahmadi/20-css-frameworks1-homeworks
+👉 [https://github.com/mohammadreza-mirahmadi/20-css-frameworks1-homeworks](https://mohammadreza-mirahmadi.github.io/20-css-frameworks1-homeworks/)
 
 ## ⚙️ Installation
 
