@@ -26,12 +26,12 @@ This project focuses on:
 
 ## 🚀 Live Demo
 
-👉 https://github.com/mohammadreza-mirahmadi/20-css-frameworks1-homewoeks
+👉 https://github.com/mohammadreza-mirahmadi/20-css-frameworks1-homeworks
 
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/mohammadreza-mirahmadi/20-css-frameworks1-homewoeks
+git clone https://github.com/mohammadreza-mirahmadi/20-css-frameworks1-homeworks
 cd tw-onepage
 npm install
 npm run dev

@@ -22,5 +22,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/20-css-frameworks1-homewoeks/",
+  base: "/20-css-frameworks1-homeworks/",
 });
