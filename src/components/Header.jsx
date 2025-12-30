@@ -1,54 +1,43 @@
-import { MenuIcon } from "lucide-react";
+import { ChevronDownIcon, MenuIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 function Header() {
   return (
     <header className="mt-4">
       <nav className="flex justify-between items-center">
         <div className="block lg:hidden">
-          <Select>
-            <SelectTrigger className="border-none">
-              <SelectValue />
-              <MenuIcon />
-            </SelectTrigger>
-            <SelectContent className="mt-8 px-2">
-              <SelectItem value="action" className="hover:scale-105">
-                About
-              </SelectItem>
-              <SelectItem value="blog" className="hover:scale-105">
-                Blog
-              </SelectItem>
-              <SelectItem value="contact" className="hover:scale-105">
-                Contact
-              </SelectItem>
-              <div className="h-[0.5px] w-[95%] mx-auto bg-gray-300 "></div>
-              <SelectItem value="action" className="hover:scale-105">
-                Action
-              </SelectItem>
-              <SelectItem value="another-action" className="hover:scale-105">
-                Another action
-              </SelectItem>
-              <SelectItem value="dropdown-submenu" className="hover:scale-105">
-                Dropdown submenu
-              </SelectItem>
-              <SelectItem value="404-page" className="hover:scale-105">
-                404 page
-              </SelectItem>
-              <div className="my-4">
-                <Button variant="outline" className="mr-3">
-                  Login
-                </Button>
-                <Button>Login</Button>
-              </div>
-            </SelectContent>
-          </Select>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">
+                <MenuIcon /> <ChevronDownIcon />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56" align="start">
+              <DropdownMenuGroup>
+                <DropdownMenuItem>About</DropdownMenuItem>
+                <DropdownMenuItem>Blog</DropdownMenuItem>
+                <DropdownMenuItem>Contact</DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Action</DropdownMenuItem>
+                <DropdownMenuItem>Another action</DropdownMenuItem>
+                <DropdownMenuItem>Dropdown submenu</DropdownMenuItem>
+                <DropdownMenuItem>404 page</DropdownMenuItem>
+                <DropdownMenuSeparator />
+              </DropdownMenuGroup>
+              <Button variant="outline" className="mr-3">
+                Login
+              </Button>
+              <Button>Login</Button>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         <p className="font-bold text-sm">
@@ -57,28 +46,19 @@ function Header() {
 
         <ul className="hidden lg:flex gap-2 items-center">
           <li>
-            <Select>
-              <SelectTrigger className="border-none">
-                <SelectValue placeholder="Features" />
-              </SelectTrigger>
-              <SelectContent className="mt-8">
-                <SelectItem value="action" className="hover:scale-105">
-                  Action
-                </SelectItem>
-                <SelectItem value="another-action" className="hover:scale-105">
-                  Another action
-                </SelectItem>
-                <SelectItem
-                  value="dropdown-submenu"
-                  className="hover:scale-105"
-                >
-                  Dropdown submenu
-                </SelectItem>
-                <SelectItem value="404-page" className="hover:scale-105">
-                  404 page
-                </SelectItem>
-              </SelectContent>
-            </Select>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline">Features</Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56" align="start">
+                <DropdownMenuGroup>
+                  <DropdownMenuItem>Action</DropdownMenuItem>
+                  <DropdownMenuItem>Another action</DropdownMenuItem>
+                  <DropdownMenuItem>Dropdown submenu</DropdownMenuItem>
+                  <DropdownMenuItem>404 page</DropdownMenuItem>
+                </DropdownMenuGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </li>
           <li>
             <a href="#" className="px-2.5 py-1 hover:scale-50">
